@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 
-  skip_before_filter :authorize
+  skip_before_filter :authorize, only: [:index]
 
   def index
     @side_projects = SideProject.first(10)
@@ -22,5 +22,8 @@ class HomeController < ApplicationController
   end
 
   def side_project
+  end
+
+  def endorse
   end
 end

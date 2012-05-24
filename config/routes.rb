@@ -37,6 +37,8 @@ FinishMySideProject2::Application.routes.draw do
 
   get "users/show"
 
+  get "home/endorse"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
