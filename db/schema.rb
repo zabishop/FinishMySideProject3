@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120521174255) do
+ActiveRecord::Schema.define(:version => 20120524153401) do
 
   create_table "comments", :force => true do |t|
     t.string   "commenter"
@@ -34,6 +34,15 @@ ActiveRecord::Schema.define(:version => 20120521174255) do
   end
 
   add_index "side_projects", ["user_id"], :name => "index_side_projects_on_user_id"
+
+  create_table "tags", :force => true do |t|
+    t.string   "name"
+    t.integer  "side_project_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "tags", ["side_project_id"], :name => "index_tags_on_side_project_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"

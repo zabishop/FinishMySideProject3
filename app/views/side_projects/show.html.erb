@@ -17,6 +17,12 @@
   <b>Repo URL:</b>
   <%= @side_project.repo_url %>
 </p>
+
+<p>
+  <b>Tags:</b>
+  <%= @side_project.tags.map { |t| t.name }.join(", ") %>
+</p>
+
 <h2>Comments</h2>
 <!--also, include a way for the viewer to edit comments-->
 <% @side_project.comments.each do |comment| %>
