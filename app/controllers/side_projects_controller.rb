@@ -7,8 +7,8 @@ class SideProjectsController < ApplicationController
   # GET /side_projects
   # GET /side_projects.json
   def index
-    @side_projects = SideProject.all
 
+    @side_projects = SideProject.paginate page: params[:page], order: 'created_at desc', per_page: 10
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @side_projects }
