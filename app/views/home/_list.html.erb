@@ -4,7 +4,9 @@
     <%= image_tag(b.image_url, class: 'list_image') %>
     <h5><%= b.project_title %></h5>
     <h6><%= b.created_at %></h6>
+    <td><%= link_to b.user.name, user_path(b.user) %></td>
     <h6>Comments: <%= b.comments.count %></h6>
+    <h6><%= link_to 'Endorse Project', home_endorse_path %></h6>
     <p><%= truncate(b.description, length: 100) %></p> <br />
   <% end %>
 

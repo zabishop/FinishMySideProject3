@@ -23,4 +23,7 @@ class HomeController < ApplicationController
 
   def side_project
   end
+
+  def endorse
+  end
 end
