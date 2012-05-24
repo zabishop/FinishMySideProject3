@@ -1,0 +1,28 @@
+<h1>Listing side_projects</h1>
+
+<table>
+  <tr>
+    <th>Image url</th>
+    <th>Project title</th>
+    <th>Description</th>
+    <th>Repo Url</th>
+    <th>User Name</th>
+    <th>User Email</th>
+    <th></th>
+  </tr>
+
+<% @side_projects.each do |side_project| %>
+  <tr>
+    <td><%= image_tag(side_project.image_url, class: 'list_image') %></td>
+    <td><%= link_to side_project.project_title, side_project %></td>
+    <td><%= truncate(side_project.description, length: 100) %></td>
+    <td><%= side_project.repo_url %></td>
+    <td><%= link_to 'View ' + side_project.user.name + '`s profile', user_path(side_project.user) %></td>
+    <td><%= link_to 'Email Owner', user_path(side_project.user) %></td>
+    <td><%= link_to 'Edit', edit_side_project_path(side_project) %></td>
+    <td><%= link_to 'Destroy', side_project, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+<br />
+

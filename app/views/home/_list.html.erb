@@ -1,0 +1,11 @@
+<div>
+
+  <% @side_projects.each do |b| %>
+    <%= image_tag(b.image_url, class: 'list_image') %>
+    <h5><%= b.project_title %></h5>
+    <h6><%= b.created_at %></h6>
+    <h6>Comments: <%= b.comments.count %></h6>
+    <p><%= truncate(b.description, length: 100) %></p> <br />
+  <% end %>
+
+</div>

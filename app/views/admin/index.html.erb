@@ -1,0 +1,23 @@
+<h1>Admin#index</h1>
+
+<h1>
+  Welcome <%= @user.name %>
+</h1>
+
+<% if flash[:alert] %>
+    <p id="notice"><%= flash[:alert] %></p>
+<% end %>
+
+<p>
+  It's <%= Time.now %><br />
+  We have <%= pluralize(@total_comments, 'new comment') %>. Last comment created at <%= @last_comment.created_at %> <br />
+  We have <%= pluralize(@total_projects, 'new project') %>. Last updated at <%= @last_project.updated_at %><br />
+  We have <%= pluralize(@total_users, 'new user') %>. Last user created at <%= @last_user.created_at %><br />
+</p>
+
+<p>
+  Admin tools:<br />
+  <%= link_to "Edit Home", home_index_path %>
+  <%= link_to "Edit About", home_about_path %>
+  <%= link_to "Approve/Reject Side Projects", side_projects_path %>
+</p>

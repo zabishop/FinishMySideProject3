@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <%= image_tag(@side_project.image_url, class: 'list_image') %>
+</p>
+
+<p>
+  <b>Project title:</b>
+  <%= @side_project.project_title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @side_project.description %>
+</p>
+<p>
+  <b>Repo URL:</b>
+  <%= @side_project.repo_url %>
+</p>
+<h2>Comments</h2>
+<!--also, include a way for the viewer to edit comments-->
+<% @side_project.comments.each do |comment| %>
+    <p>
+      <b>Commenter:</b>
+      <%= comment.commenter %>
+    </p>
+
+    <p>
+      <b>Comment:</b>
+      <%= comment.body %>
+    </p>
+    <p>
+      <b>Created:</b>
+      <%= comment.created_at %>
+    </p>
+
+
+    <%= link_to 'Destroy Comment', [comment.side_project, comment],
+                        :confirm => 'Are you sure?',
+                        :method => :delete %>
+
+
+<% end %>
+
+<h2>Add a comment:</h2>
+<%=  render 'comments/comment' %>
+
+<%= link_to 'Edit', edit_side_project_path(@side_project) %> |
+<%= link_to 'Back', side_projects_path %>
