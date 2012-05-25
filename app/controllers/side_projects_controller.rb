@@ -46,6 +46,7 @@ class SideProjectsController < ApplicationController
   # POST /side_projects.json
   def create
     @side_project = SideProject.new(params[:side_project])
+    @side_project.user = User.find(session[:user_id])
 
     respond_to do |format|
       if @side_project.save

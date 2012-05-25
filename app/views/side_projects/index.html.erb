@@ -16,7 +16,7 @@
     <td><%= link_to side_project.project_title, side_project %></td>
     <td><%= truncate(side_project.description, length: 100) %></td>
     <td><%= side_project.repo_url %></td>
-    <td><%= link_to 'Email Owner', user_path(side_project.user) %></td>
+    <td><%= link_to 'Email Owner', side_project.user %></td>
     <td><%= link_to 'Edit', edit_side_project_path(side_project) %></td>
     <td><%= link_to 'Destroy', side_project, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
