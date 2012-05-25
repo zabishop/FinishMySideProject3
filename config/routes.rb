@@ -31,13 +31,16 @@ FinishMySideProject2::Application.routes.draw do
 
   get "home/side_project"
 
-  get "side_projects/index"
-
   get "users/new"
 
   get "users/show"
 
   get "home/endorse"
+
+
+  #This solves the routes issues to users: http://stackoverflow.com/questions/5136940/undefined-method-user-path
+  #I Googled: _path rails
+  match '/users/:id', :to => 'users#show', :as => :user
 
 
   # The priority is based upon order of creation:
@@ -89,7 +92,7 @@ FinishMySideProject2::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-root :to => 'home#index'
+  root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
 
