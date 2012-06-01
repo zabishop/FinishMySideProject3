@@ -19,7 +19,7 @@ class SideProjectsController < ApplicationController
   # GET /side_projects/1.json
   def show
     @side_project = SideProject.find(params[:id])
-
+   #{ @comment = Comment.find(params[:id])}
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @side_project }
