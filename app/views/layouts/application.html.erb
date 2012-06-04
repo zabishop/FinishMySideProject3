@@ -2,35 +2,62 @@
 <html>
 <head>
   <title>FinishMySideProject2</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 
-<header class="link">
+<body>
 
-  <%= link_to "Home", index_path %>
-  <%= link_to "About", about_path %>
-  <%= link_to "View Side Projects", side_projects_path %>
-  <%= link_to "New Side Project", new_side_project_path %>
-  <%= link_to "Create Account", new_user_path %>
-  <%= link_to "Login", login_path %>
-  <%= link_to "Logout", logout_path %>
+<header>
+
+  <div class="image1">
+    <%= image_tag("redArrow.png") %>
+  </div>
+
+  <div class="image2">
+    <%= image_tag("cloud.png") %>
+  </div>
+
+  <div class="image3">
+    <%= image_tag("greenArrow.png") %>
+  </div>
+
+  <div id="topLinks">
+
+    <%= link_to "About", about_path %>
+    <%= link_to "Terms of Use", terms_path %>
+    <%= link_to "privacy policy", privacy_path %>
+    <%= link_to "- Login -", login_path %>
+  </div>
+
+  <div class="siteTitle">
+    <%= link_to "FinishMySideProject.com", index_path %>
+  </div>
+
+  <div class="bottomLinks">
+    <%= link_to "Browse", side_projects_path %>
+    <%= link_to "submit", new_side_project_path %>
+  </div>
+
+  <div id="headerBackground">
+  </div>
 
 </header>
 
-<body>
 
-<%= yield %>
+<div id="siteContainer">
 
-</body>
+  <%= yield %>
+</div>
+
 
 <footer>
-
   <%= link_to "Terms of Use", terms_path %>
   <%= link_to "Our Privacy Policy", privacy_path %>
   <%= link_to "Admin", admin_path() %>
-
 </footer>
+
+</body>
 
 </html>

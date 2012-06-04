@@ -15,11 +15,17 @@ FinishMySideProject2::Application.routes.draw do
 
   #get "sessions/destroy"
 
+
+
   resources :users
 
   resources :side_projects do
     resources :comments
   end
+
+  get "public/fonts"
+
+  get "assets/fonts", as: 'fonts'
 
   get "home/index", as: 'index'
 
@@ -39,6 +45,7 @@ FinishMySideProject2::Application.routes.draw do
   #This solves the routes issues to users: http://stackoverflow.com/questions/5136940/undefined-method-user-path
   #I Googled: _path rails
   match '/users/:id', :to => 'users#show', :as => :user
+
 
 
   # The priority is based upon order of creation:

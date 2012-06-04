@@ -1,15 +1,16 @@
-<div class="project">
+
 
   <% @side_projects.each do |b| %>
       <div class="item">
-    <%= image_tag(b.image_url, class: 'list_image') %>
-    <%= b.project_title %>
-    <%= b.created_at %>
-    <%= link_to b.user.name, user_path(b.user) %>
-    Comments: <%= b.comments.count %>
-    <%= link_to 'Endorse Project', endorse_path %>
-    <p><%= truncate(b.description, length: 100) %></p> <br />
+
+        <%= image_tag(b.image_url, class: 'list_image') %>
+        <ul>
+          <li><%= link_to b.project_title, side_project_path(b.id) %></li>
+          <li> <%= b.created_at %> </li>
+          <li><%= link_to b.user.name, user_path(b.user) %> </li>
+        <li>Comments: <%= b.comments.count %></li>
+        </ul>
+        <p><%= truncate(b.description, length: 200) %></p> <br />
+        <%= link_to 'Endorse Project', endorse_path %>
       </div>
   <% end %>
-
-</div>
