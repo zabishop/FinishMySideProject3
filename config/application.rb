@@ -57,3 +57,4 @@ module FinishMySideProject2
     config.assets.version = '1.0'
   end
 end
+

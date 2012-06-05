@@ -11,3 +11,210 @@
  *= require_self
  *= require_tree .
 */
+/** * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */
+
+
+/*font faces  ***            ***             ***   */
+
+
+/* css reset */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+/*global styles***            ***             ***     */
+
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: url('siteBackground.jpg') repeat-x #d8ebd6;
+}
+
+ol {
+    margin: 15px;
+    padding: 5px;
+    background: #d5df63;
+}
+
+h1 {
+    color: white;
+    font-size: 2em;
+    font-family: 'Georgia', 'Menlo', 'Courier', 'Arial';
+    text-align: left;
+    margin: 0 auto;
+    padding: 10px;
+    background:  #65b7bb;
+}
+
+h2 {
+    color: #93c44a;
+    font-weight: bold;
+    margin: 10px;
+}
+
+p {
+    margin: 15px;
+}
+
+.paginate {
+    font-family: 'Courier New';
+    font-size: 1em;
+    background: tan;
+}
+
+/* site container/background */
+
+.image1 {
+    position: absolute;
+    z-index: 2;
+    left: 122px
+}
+.image2 {
+    position: absolute;
+    top: 111px;
+    z-index: 3;
+}
+
+.image3 {
+    position: absolute;
+    top: 26px;
+    z-index: 4;
+}
+
+header {
+  margin: 0 0 0 0;
+  height: 157px;
+}
+
+#topLinks {
+    height: 69px;
+    width: 100%;
+}
+
+#topLinks a {
+    position: relative;
+    top: 50%;
+    left: 65%;
+    height: 20px;
+    width: 60px;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: .75em;
+    color: #65b7bb;
+}
+
+ #topLinks>a:first-child {
+    margin-left: 0;
+}
+
+#topLinks>a:last-child {
+    text-transform: none;
+}
+
+#headerBackground {
+    margin: 0 0 0 0;
+    position: relative;
+    z-index: 1;
+    background-color: #65b7bb;
+    padding: 0;
+    height: 88px;
+    width: 100%;
+}
+
+.siteTitle {
+    position: absolute;
+    left: 275px;
+    top : 100px;
+    font-size: 3em;
+    z-index: 7;
+}
+
+.siteTitle a {
+   text-transform: none;
+   color: white;
+}
+
+
+.bottomLinks {
+    position: absolute;
+    top: 100px;
+    left: 883px;
+    z-index: 6;
+    font-size: 2em;
+    color: #ffffff;
+}
+
+.bottomLinks a {
+    color: white;
+    margin: 0 auto;
+    padding: 0 20px;
+    border-right: 2px solid white;
+}
+.bottomLinks a:last-child{
+    border: none;
+}
+.bottomLinks a:visited {
+    color: white;
+}
+
+#siteContainer {
+    width: 945px;
+    background: url('containerBackground.jpg') repeat-x #fefdfd;
+    position: relative;
+    z-index: 5;
+    margin: 15px auto;
+    padding: 0;
+}
+
+footer {
+    width: 100%;
+    margin: 0 auto;
+    background: #65b7bb;
+    position: relative;
+    z-index: 7;
+}
+

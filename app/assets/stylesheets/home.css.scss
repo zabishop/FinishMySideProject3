@@ -1,3 +1,55 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+article {
+  font-family: 'Courier';
+}
+
+
+
+article p {
+  height: 70px;
+  width: 80%;
+  padding: 10px;
+  margin: 10px auto;
+  background-color: tan;
+  font-family: "Georgia";
+}
+
+span:first-child {
+  color: green;
+  weight: bold;
+  font-size: 1.2em;
+}
+
+.item {
+  width: 40%;
+  height: 40%;
+  margin: 15px;
+  background: #ccc;
+  padding: 5px;
+  border: 2px solid black;
+  display: inline-block;
+}
+
+.item ul {
+  float: right;
+}
+
+.item p {
+  margin: 10px;
+  font-family: 'Courier'
+}
+
+
+.item a:nth-child(n+2) {
+  margin: 0 auto;
+  padding: 3px;
+  background: #65b7bb;
+  text-align: center;
+  border: 2px red;
+  border-style: ridge;
+
+}

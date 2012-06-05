@@ -1,9 +1,9 @@
 class HomeController < ApplicationController
 
-  skip_before_filter :authorize, only: [:index]
+  skip_before_filter :authorize, only: [:index, :terms_of_use, :privacy_policy, :about]
 
   def index
-    @side_projects = SideProject.first(10)
+    @side_projects = SideProject.paginate page: params[:page], order: 'created_at desc', per_page: 5
 
 
     #respond_to do |format|
