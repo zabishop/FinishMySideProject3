@@ -1,12 +1,11 @@
 <%= form_for([@side_project, @side_project.comments.build]) do |f| %>
-   <p>Leave a comment?</p>
-
 
     <div class="field">
-      <%= f.label :body %><br />
+      <%= f.label :body %>
       <%= f.text_area :body %>
     </div>
     <div class="actions">
       <%= f.submit %>
     </div>
+
 <% end %>

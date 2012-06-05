@@ -1,27 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <%= image_tag(@side_project.image_url, class: 'list_image') %>
-</p>
 
-<p>
+<div class="projectDetails">
+
+<h1>
   <b>Project title:</b>
   <%= @side_project.project_title %>
-</p>
+</h1>
 
-<p>
-  <b>Description:</b>
-  <%= @side_project.description %>
-</p>
-<p>
-  <b>Repo URL:</b>
+<div class="imageShow">
+  <%= image_tag(@side_project.image_url, class: 'list_image') %>
+</div>
+
+
+<h2>Description:</h2>
+
+<p><%= @side_project.description %></p>
+
+ <h2>Repo URL:</h2>
   <%= @side_project.repo_url %>
-</p>
 
-<p>
-  <b>Tags:</b>
+
+
+  <h2>Tags:</h2>
   <%= @side_project.tags.map { |t| t.name }.join(", ") %>
-</p>
+
 
 <h2>Comments</h2>
 <!--also, include a way for the viewer to edit comments-->
@@ -35,21 +38,21 @@
       <b>Comment:</b>
       <%= comment.body %>
     </p>
+
     <p>
       <b>Created:</b>
       <%= comment.created_at %>
     </p>
 
 
-    <%= link_to 'Destroy Comment', [comment.side_project, comment],
-                        :confirm => 'Are you sure?',
-                        :method => :delete %>
-
 
 <% end %>
 
 <h2>Add a comment:</h2>
-<%=  render 'comments/comment' %>
+<%= render 'comments/comment' %>
 
-<%= link_to 'Edit', edit_side_project_path(@side_project) %> |
+
 <%= link_to 'Back', side_projects_path %>
+<!-- back functionality is broken site-wide -->
+
+</div>

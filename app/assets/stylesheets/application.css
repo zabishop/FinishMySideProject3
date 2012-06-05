@@ -105,9 +105,12 @@ h1 {
 }
 
 h2 {
-    color: #93c44a;
-    font-weight: bold;
-    margin: 10px;
+    font-family: "tradegothicltstdcnbold";
+    background-color: #93c44a;
+    color: white;
+    margin: 0 auto;
+    padding: 10px;
+
 }
 
 h3 {
@@ -196,12 +199,11 @@ header {
     z-index: 7;
 }
 
-.siteTitle a {
+.siteTitle a, .siteTitle a:visited {
    text-transform: none;
    color: white;
    font-family: "tradegothicltstdcnbold";
 }
-
 
 .bottomLinks {
     position: absolute;
