@@ -25,18 +25,33 @@ tr {
   display: inline-block;
 } */
 
-.project {
-  color: white;
-  margin: 10px;
-  padding: 10px;
-  border: 2px solid #65b7bb;
-  background: #d5df63;
-}
 
 .description {
-  background-color: grey;
+  background-color: #e0ffff;
+  width: 45%;
+  margin: 10px auto;
+  display: inline-block;
+}
+
+.description h3 {
+  padding: 5px;
+}
+
+.description h3 a, .description h3 a:visited {
+  color: white;
+ text-transform: none;
+}
+
+.description p {
+  margin: 5px;
   width: 50%;
-  height: 200px;
-  margin:  auto;
   float: right;
+}
+.description img {
+  float: left;
+  margin: 5px;
+}
+
+.description button_to {
+  background-color: yellow;
 }

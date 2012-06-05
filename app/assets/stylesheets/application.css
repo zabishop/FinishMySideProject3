@@ -81,8 +81,6 @@ a {
     text-transform: uppercase;
 }
 
-
-
 body {
     margin: 0;
     padding: 0;
@@ -112,9 +110,18 @@ h2 {
     margin: 10px;
 }
 
+h3 {
+    font-family: "AmericanTypewriterStdMedRg";
+    margin: 0;
+    font-size: 1.75em;
+    color: white;
+    background: #65b7bb;
+}
+
 p {
     margin: 15px;
 }
+
 
 .paginate {
     font-family: 'Courier New';
@@ -124,18 +131,17 @@ p {
 
 /* site container/background */
 
-.image1 {
-    position: absolute;
+.redArrow {
+    position: relative;
+    top: -158px;
+    left: -10px;
+    width: 1119px;
+    margin: 0 auto;
     z-index: 2;
-    left: 122px
-}
-.image2 {
-    position: absolute;
-    top: 111px;
-    z-index: 3;
 }
 
-.image3 {
+
+.greenArrow {
     position: absolute;
     top: 26px;
     z-index: 4;
@@ -143,16 +149,17 @@ p {
 
 header {
   margin: 0 0 0 0;
-  height: 157px;
+    height: 157px;
 }
 
 #topLinks {
     height: 69px;
-    width: 100%;
+
 }
 
 #topLinks a {
     position: relative;
+    z-index: 10;
     top: 50%;
     left: 65%;
     height: 20px;
@@ -192,6 +199,7 @@ header {
 .siteTitle a {
    text-transform: none;
    color: white;
+   font-family: "tradegothicltstdcnbold";
 }
 
 

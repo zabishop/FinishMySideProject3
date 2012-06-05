@@ -2,32 +2,7 @@
 
   <h1>Browse Side Projects</h1>
 
-  <div class="paginate"><%= will_paginate @side_projects %></div>
-  <% @side_projects.each do |side_project| %>
-      <div class="project">
-
-        <div class="description"> <%= truncate(side_project.description, length: 300) %> <%= link_to side_project.project_title, side_project %> </div>
-
-        <ul>
-          <li><%= image_tag(side_project.image_url, class: 'list_image') %></li>
-          <li><%= link_to side_project.project_title, side_project %>     </li>
-          <li><%= side_project.repo_url %>     </li>
-        </ul>
-
-
-
-        <ul>
-          <li><%= button_to 'Email Owner', side_project.user %>   </li>
-          <li><%= button_to 'Edit', edit_side_project_path(side_project) %>  </li>
-          <!-- this needs to be made admin only -->
-          <li><%= button_to 'Destroy', side_project, confirm: 'Are you sure?', method: :delete %> </li>
-          <!-- this needs to be made admin only -->
-          <li><%= button_to 'Endorse Project', endorse_path %></li>
-        </ul>
-      </div>
-
-  <% end %>
-  <br/>
+  <%= render :partial => 'side_projects/list' %>
 
   <div class="paginate"><%= will_paginate @side_projects %></div>
 

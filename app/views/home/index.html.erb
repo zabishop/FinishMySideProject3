@@ -2,7 +2,7 @@
   <article>
     <h1>Welcome!</h1>
 
-    <p class="welcome">
+    <p>
       <span> Lorem ipsum </span> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
       labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
       ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
@@ -11,13 +11,15 @@
     </p>
   </article>
 
+  <h1>Featured Project:</h1>
+
+  <%= render :partial => 'home/featured' %>
+
   <h1>Projects of the Day:</h1>
 
-  <div class="paginate"<%= will_paginate @side_projects %></div>
-
   <div class="project">
-    <%= render :partial => 'home/list' %>
+    <%= render :partial => 'side_projects/list' %>
   </div>
-  <div class="paginate"><%= will_paginate @side_projects %></div>
+
 
 </div>
