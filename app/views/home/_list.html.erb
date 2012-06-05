@@ -11,6 +11,6 @@
         <li>Comments: <%= b.comments.count %></li>
         </ul>
         <p><%= truncate(b.description, length: 200) %></p> <br />
-        <%= link_to 'Endorse Project', endorse_path %>
+        <%= button_to 'Endorse Project', endorse_path %>
       </div>
   <% end %>
