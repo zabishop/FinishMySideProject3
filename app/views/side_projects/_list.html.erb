@@ -9,12 +9,14 @@
       <%= image_tag(side_project.image_url, class: 'list_image') %>
 
       <%= side_project.repo_url %>
+      <div class id="descriptionButtons">
       <%= button_to 'Email Owner', side_project.user %>
-      <%= button_to 'Edit', edit_side_project_path(side_project) %>
+      <!--  #button_to 'Edit', edit_side_project_path(side_project) %>
       <!-- edit needs to be made admin and/or owner only -->
-      <%= button_to 'Destroy', side_project, confirm: 'Are you sure?', method: :delete %>
+      <!--  #button_to 'Destroy', side_project, confirm: 'Are you sure?', method: :delete %>
       <!-- destroy  needs to be made admin and/or owner only -->
       <%= button_to 'Endorse Project', endorse_path %>
+      </div>
     </div>
 
 

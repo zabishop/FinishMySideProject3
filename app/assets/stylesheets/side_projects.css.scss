@@ -10,6 +10,7 @@
 }
 
 .description h3 {
+  background-color: #e9332;
   padding: 5px;
 }
 
@@ -20,7 +21,7 @@
 
 .description p {
   margin: 5px;
-  width: 50%;
+  width: 60%;
   float: right;
 }
 .description img {
@@ -28,8 +29,10 @@
   margin: 5px;
 }
 
-.description button_to {
-  background-color: yellow;
+.descriptionButtons {
+  width: 40%;
+  padding: 5px auto;
+  float: left;
 }
 
 .projectDetails {
@@ -39,4 +42,16 @@
 .projectDetails img {
   float: left;
   margin: 10px;
+}
+
+/* styles for new side project */
+
+.field {
+  padding: 10px;
+  margin: 10px;
+}
+
+.field + h2 {
+  margin: 0 auto;
+  padding: 0;
 }

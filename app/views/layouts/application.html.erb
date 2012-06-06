@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FinishMySideProject2</title>
+  <title>Finish My Side Project</title>
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -48,9 +48,12 @@
 
 
 <footer>
+  <div id="footerLinks">
   <%= link_to "Terms of Use", terms_path %>
   <%= link_to "Our Privacy Policy", privacy_path %>
   <%= link_to "Admin", admin_path() %>
+  <p>© Freckle Interactive, LLC <%= Time.now.year %></p>
+  </div>
 </footer>
 
 </body>

@@ -85,8 +85,12 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    background: url('siteBackground.jpg') repeat-x #d8ebd6;
+    background-repeat: repeat-x;
+    background-image: url('siteBackground.jpg');
+    background-color: #d8ebd6;
 }
+/* can't get the background color to take */
+
 
 ol {
     margin: 15px;
@@ -118,7 +122,7 @@ h3 {
     margin: 0;
     font-size: 1.75em;
     color: white;
-    background: #65b7bb;
+    background: #e9332c;
 }
 
 p {
@@ -136,7 +140,7 @@ p {
 
 .redArrow {
     position: relative;
-    top: -158px;
+    top: -163px;
     left: -10px;
     width: 1119px;
     margin: 0 auto;
@@ -146,8 +150,9 @@ p {
 
 .greenArrow {
     position: absolute;
+    right: 50%;
     top: 26px;
-    z-index: 4;
+    z-index: 7;
 }
 
 header {
@@ -160,18 +165,25 @@ header {
 
 }
 
-#topLinks a {
-    position: relative;
+#topLinks {
+    color: #65b7bb;
+    position: absolute;
     z-index: 10;
-    top: 50%;
-    left: 65%;
+    left: 60%;
+    top: 45px;
     height: 20px;
-    width: 60px;
     margin-top: 10px;
     margin-left: 20px;
     font-size: .75em;
     color: #65b7bb;
+    font-family: "TradeGothicLTStdCnBold";
 }
+
+#topLinks a:visited {
+    color: #65b7bb;
+}
+
+
 
  #topLinks>a:first-child {
     margin-left: 0;
@@ -182,7 +194,7 @@ header {
 }
 
 #headerBackground {
-    margin: 0 0 0 0;
+    margin: 75px 0 0 0;
     position: relative;
     z-index: 1;
     background-color: #65b7bb;
@@ -193,9 +205,9 @@ header {
 
 .siteTitle {
     position: absolute;
-    left: 275px;
-    top : 100px;
-    font-size: 3em;
+    right: 52%;
+    top : 90px;
+    font-size: 2.75em;
     z-index: 7;
 }
 
@@ -208,7 +220,7 @@ header {
 .bottomLinks {
     position: absolute;
     top: 100px;
-    left: 883px;
+    left: 60%;
     z-index: 6;
     font-size: 2em;
     color: #ffffff;
@@ -225,7 +237,8 @@ header {
 .bottomLinks a:last-child{
     border: none;
 }
-.bottomLinks a:visited {
+
+ .bottomLinks a:visited {
     color: white;
     font-family: courier;
 }
@@ -234,16 +247,29 @@ header {
     width: 945px;
     background: url('containerBackground.jpg') repeat-x #fefdfd;
     position: relative;
+    top: -25px;
     z-index: 5;
-    margin: 15px auto;
+    margin: 0 auto;
     padding: 0;
+    /* min-height: 500px; */
 }
 
 footer {
+    height: 100px;
+    background: #65b7bb;
     width: 100%;
     margin: 0 auto;
-    background: #65b7bb;
-    position: relative;
-    z-index: 7;
+
 }
 
+#footerLinks a, #footerLinks p {
+    display: inline-block;
+    text-align: center;
+    padding: 1%;
+    margin: 0 auto;
+    background-color: red;
+    color: white;
+    font-family: "TradeGothicLTStdCnBold";
+    font-size:  1em;
+
+}
