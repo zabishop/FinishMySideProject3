@@ -41,6 +41,7 @@ FinishMySideProject2::Application.routes.draw do
 
   get "home/endorse", as: 'endorse'
 
+  get "tags/index"
 
   #This solves the routes issues to users: http://stackoverflow.com/questions/5136940/undefined-method-user-path
   #I Googled: _path rails

@@ -41,6 +41,9 @@ for i in 1..10
 
   Tag.create(:name => 'blue',
              :side_project => @my_side_project2)
+
+  Tag.create(:name => 'blue',
+             :side_project => @my_side_project1)
 end
 
 
