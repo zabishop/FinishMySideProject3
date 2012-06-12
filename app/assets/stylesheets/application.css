@@ -247,11 +247,11 @@ header {
     width: 945px;
     background: url('containerBackground.jpg') repeat-x #fefdfd;
     position: relative;
-    top: -25px;
     z-index: 5;
     margin: 0 auto;
+    margin-top: -50px;
     padding: 0;
-    /* min-height: 500px; */
+    min-height: 600px;
 }
 
 footer {
