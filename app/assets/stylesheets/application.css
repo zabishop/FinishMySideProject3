@@ -17,7 +17,7 @@
 /*font faces  ***            ***             ***   */
 
 
-/* css reset */
+
 
 @font-face {
   font-family: 'TradeGothicLTStdCnBold';
@@ -34,7 +34,7 @@
     font-weight: normal;
     font-style: normal;
 }
-
+/* css reset */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
@@ -80,7 +80,6 @@ a {
     text-decoration: none;
     text-transform: uppercase;
 }
-
 body {
     margin: 0;
     padding: 0;
@@ -89,15 +88,11 @@ body {
     background-image: url('siteBackground.jpg');
     background-color: #d8ebd6;
 }
-/* can't get the background color to take */
-
-
 ol {
     margin: 15px;
     padding: 5px;
     background: #d5df63;
 }
-
 h1 {
     color: white;
     font-size: 2em;
@@ -107,7 +102,6 @@ h1 {
     padding: 10px;
     background:  #65b7bb;
 }
-
 h2 {
     font-family: "tradegothicltstdcnbold";
     background-color: #93c44a;
@@ -116,7 +110,6 @@ h2 {
     padding: 10px;
 
 }
-
 h3 {
     font-family: "AmericanTypewriterStdMedRg";
     margin: 0;
@@ -124,17 +117,25 @@ h3 {
     color: white;
     background: #e9332c;
 }
-
 p {
     margin: 15px;
 }
-
-
 .paginate {
-    font-family: 'Courier New';
-    font-size: 1em;
-    background: tan;
+    font-family: "TradeGothicLTStdCnBold";
+    font-size: 24px;
+    text-transform: uppercase;
+    color: white;
+    height: 47px;
+    width: 100%;
+    background: #65b7bb url('headingBG2.jpg') no-repeat right;
 }
+
+.paginate a, .paginate em, .paginate span {
+    position: relative;
+    top: 10px;
+}
+
+
 
 /* site container/background */
 
@@ -146,25 +147,20 @@ p {
     margin: 0 auto;
     z-index: 2;
 }
-
-
 .greenArrow {
     position: absolute;
     right: 50%;
     top: 26px;
     z-index: 7;
 }
-
 header {
   margin: 0 0 0 0;
     height: 157px;
 }
-
 #topLinks {
     height: 69px;
 
 }
-
 #topLinks {
     color: #65b7bb;
     position: absolute;
@@ -178,21 +174,15 @@ header {
     color: #65b7bb;
     font-family: "TradeGothicLTStdCnBold";
 }
-
 #topLinks a:visited {
     color: #65b7bb;
 }
-
-
-
- #topLinks>a:first-child {
+#topLinks>a:first-child {
     margin-left: 0;
 }
-
 #topLinks>a:last-child {
     text-transform: none;
 }
-
 #headerBackground {
     margin: 75px 0 0 0;
     position: relative;
@@ -202,7 +192,6 @@ header {
     height: 88px;
     width: 100%;
 }
-
 .siteTitle {
     position: absolute;
     right: 52%;
@@ -210,13 +199,11 @@ header {
     font-size: 2.75em;
     z-index: 7;
 }
-
 .siteTitle a, .siteTitle a:visited {
    text-transform: none;
    color: white;
    font-family: "tradegothicltstdcnbold";
 }
-
 .bottomLinks {
     position: absolute;
     top: 100px;
@@ -225,7 +212,6 @@ header {
     font-size: 2em;
     color: #ffffff;
 }
-
 .bottomLinks a {
     color: white;
     margin: 0 auto;
@@ -237,11 +223,59 @@ header {
 .bottomLinks a:last-child{
     border: none;
 }
-
- .bottomLinks a:visited {
+.bottomLinks a:visited {
     color: white;
     font-family: courier;
 }
+
+/* Stles for the home hero spot.  needs refactoring/cleaning up ////////////////*/
+
+#homeHero {
+    width: 874px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+#homeHeroContentContainer {
+    background: url('heroBackground.jpg') repeat-x red;
+    height: 335px;
+
+}
+#homeHero img {
+    float: left;
+}
+#homeHero p {
+    height: 605px;
+    float: right;
+}
+.heroRed, .heroBlue, .heroGreen {
+    font-family: "TradeGothicLTStdCnBold";
+
+}
+.heroRed {
+    position: relative;
+    top: 40px;
+    left: 10px;
+    font-size: 128px;
+    text-transform: uppercase;
+    color: #e9332c;
+}
+.heroBlue {
+    position: relative;
+    top: 20px;
+    left: 10px;
+    text-align: center;
+    font-size: 72px;
+    color: #65b7bb;
+}
+.heroGreen {
+    position: relative;
+    top: 20px;
+    left: 10px;
+    font-size: 90px;
+    color: #93c44a;
+}
+
+/* Style for the site containers ////////*/
 
 #siteContainer {
     width: 945px;
@@ -253,6 +287,10 @@ header {
     padding: 0;
     min-height: 600px;
 }
+
+
+
+/* styles for the footers /////////////////*/
 
 footer {
     height: 100px;

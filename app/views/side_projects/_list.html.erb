@@ -1,25 +1,18 @@
-<div class="paginate"><%= will_paginate @side_projects %></div>
-<% @side_projects.each do |side_project| %>
+<div class="projectsContainer">
+  <% @side_projects.each do |side_project| %>
+      <div class="descriptionContainer shadow">
+          <h3><%= link_to side_project.project_title, side_project %></h3>
 
+          <p><%= truncate(side_project.description, length: 200) %></p>
+          <%= image_tag(side_project.image_url, class: 'list_image') %>
+          <%= side_project.repo_url %>
+          <div class="descriptionButtons">
+            <%= button_to 'Email Owner', side_project.user %>
+            <!--  #button_to 'Edit', edit_side_project_path(side_project) %> edit needs to be made admin and/or owner only -->
+            <!--  #button_to 'Destroy', side_project, confirm: 'Are you sure?', method: :delete %> destroy  needs to be made admin and/or owner only -->
+            <%= button_to 'Endorse Project', endorse_path %>
+          </div>
 
-    <div class="description">
-      <h3><%= link_to side_project.project_title, side_project %></h3>
-      <p><%= truncate(side_project.description, length: 300) %></p>
-
-      <%= image_tag(side_project.image_url, class: 'list_image') %>
-
-      <%= side_project.repo_url %>
-      <div class id="descriptionButtons">
-      <%= button_to 'Email Owner', side_project.user %>
-      <!--  #button_to 'Edit', edit_side_project_path(side_project) %>
-      <!-- edit needs to be made admin and/or owner only -->
-      <!--  #button_to 'Destroy', side_project, confirm: 'Are you sure?', method: :delete %>
-      <!-- destroy  needs to be made admin and/or owner only -->
-      <%= button_to 'Endorse Project', endorse_path %>
       </div>
-    </div>
-
-
-<% end %>
-<div class="paginate"><%= will_paginate @side_projects %></div>
-<br/>
+  <% end %>
+</div>

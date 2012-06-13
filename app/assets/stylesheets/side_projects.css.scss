@@ -2,13 +2,41 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.description {
-  background-color: #e0ffff;
-  width: 45%;
+.projectsContainer {
+  background-color: #cdcab6;
   margin: 10px auto;
+  width: 875px;
+}
+
+
+.descriptionContainer {
+  background-color: white;
+  width: 400px;
+  height: 300px;
+  margin: 10px;
+  padding: 5px;
   display: inline-block;
 }
 
+.descriptionContainer p {
+  margin: 5px;
+  width: 60%;
+  float: right;
+}
+.shadow {
+  -moz-box-shadow: 3px 3px 5px 0 #8a8877;
+  -webkit-box-shadow: 3px 3px 5px 0 #8a8877;
+  box-shadow: 3px 3px 5px 0 #8a8877;
+}
+.descriptionContainer h3 a {
+  font-family: "TradeGothicLTStdCnBold";
+  color: white;
+}
+
+/* can't seem to get the description blocks to center properly */
+
+
+/*
 .description h3 {
   background-color: #e9332;
   padding: 5px;
@@ -19,11 +47,7 @@
  text-transform: none;
 }
 
-.description p {
-  margin: 5px;
-  width: 60%;
-  float: right;
-}
+
 .description img {
   float: left;
   margin: 5px;
@@ -43,6 +67,7 @@
   float: left;
   margin: 10px;
 }
+*/
 
 /* styles for new side project */
 
