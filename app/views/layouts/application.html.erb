@@ -6,33 +6,24 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-
 <body>
-
 <header>
-
-
-
   <div class="greenArrow">
     <%= image_tag("greenArrow.png") %>
   </div>
-
   <div id="topLinks">
     <%= link_to "About", about_path %>
     <%= link_to "Terms of Use", terms_path %>
     <%= link_to "privacy policy", privacy_path %>
     <%= link_to "- Login -", login_path %>
   </div>
-
   <div class="siteTitle">
     <%= link_to "FinishMySideProject.com", index_path %>
   </div>
-
   <div class="bottomLinks">
     <%= link_to "Browse", side_projects_path %>
     <%= link_to "submit", new_side_project_path %>
   </div>
-
   <div id="headerBackground">
   </div>
   <div class="redArrow">
@@ -40,19 +31,17 @@
   </div>
 </header>
 
-
 <div id="siteContainer">
-
   <%= yield %>
 </div>
 
 
 <footer>
   <div id="footerLinks">
-  <%= link_to "Terms of Use", terms_path %>
-  <%= link_to "Our Privacy Policy", privacy_path %>
-  <%= link_to "Admin", admin_path() %>
-  <p>© Freckle Interactive, LLC <%= Time.now.year %></p>
+    <%= link_to "Terms of Use", terms_path %>
+    <%= link_to "Our Privacy Policy", privacy_path %>
+    <%= link_to "Admin", admin_path() %>
+    <p>© Freckle Interactive, LLC <%= Time.now.year %></p>
   </div>
 </footer>
 

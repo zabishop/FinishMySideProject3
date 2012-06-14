@@ -48,33 +48,25 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display: block;
 }
-
 body {
     line-height: 1;
 }
-
 ol, ul {
     list-style: none;
 }
-
 blockquote, q {
     quotes: none;
 }
-
 blockquote:before, blockquote:after, q:before, q:after {
     content: '';
     content: none;
 }
-
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
 
-
-
 /*global styles***            ***             ***     */
-
 
 a {
     text-decoration: none;
@@ -96,7 +88,7 @@ ol {
 h1 {
     color: white;
     font-size: 2em;
-    font-family: "AmericanTypewriterStdMedRg";
+    font-family: "TradeGothicLTStdCnBold";
     text-align: left;
     margin: 0 auto;
     padding: 10px;
@@ -111,8 +103,9 @@ h2 {
 
 }
 h3 {
-    font-family: "AmericanTypewriterStdMedRg";
+    font-family: "TradeGothicLTStdCnBold";
     margin: 0;
+    padding: 3px;
     font-size: 1.75em;
     color: white;
     background: #e9332c;
@@ -129,13 +122,10 @@ p {
     width: 100%;
     background: #65b7bb url('headingBG2.jpg') no-repeat right;
 }
-
 .paginate a, .paginate em, .paginate span {
     position: relative;
     top: 10px;
 }
-
-
 
 /* site container/background */
 
@@ -228,52 +218,7 @@ header {
     font-family: courier;
 }
 
-/* Stles for the home hero spot.  needs refactoring/cleaning up ////////////////*/
 
-#homeHero {
-    width: 874px;
-    margin: 0 auto;
-    padding-top: 30px;
-}
-#homeHeroContentContainer {
-    background: url('heroBackground.jpg') repeat-x red;
-    height: 335px;
-
-}
-#homeHero img {
-    float: left;
-}
-#homeHero p {
-    height: 605px;
-    float: right;
-}
-.heroRed, .heroBlue, .heroGreen {
-    font-family: "TradeGothicLTStdCnBold";
-
-}
-.heroRed {
-    position: relative;
-    top: 40px;
-    left: 10px;
-    font-size: 128px;
-    text-transform: uppercase;
-    color: #e9332c;
-}
-.heroBlue {
-    position: relative;
-    top: 20px;
-    left: 10px;
-    text-align: center;
-    font-size: 72px;
-    color: #65b7bb;
-}
-.heroGreen {
-    position: relative;
-    top: 20px;
-    left: 10px;
-    font-size: 90px;
-    color: #93c44a;
-}
 
 /* Style for the site containers ////////*/
 
@@ -288,7 +233,11 @@ header {
     min-height: 600px;
 }
 
-
+.contentContainer {
+    width: 874px;
+    margin: 0 auto;
+    padding: 0;
+}
 
 /* styles for the footers /////////////////*/
 
@@ -296,16 +245,22 @@ footer {
     height: 100px;
     background: #65b7bb;
     width: 100%;
+
+    padding: 0;
     margin: 0 auto;
 
 }
+#footerLinks {
+    width: 500px;
+    margin: 0px auto;
 
+}
 #footerLinks a, #footerLinks p {
     display: inline-block;
     text-align: center;
     padding: 1%;
     margin: 0 auto;
-    background-color: red;
+
     color: white;
     font-family: "TradeGothicLTStdCnBold";
     font-size:  1em;

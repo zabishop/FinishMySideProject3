@@ -1,39 +1,37 @@
-<div class="home">
+<div id="homeHero">
+  <div id="homeHeroContentContainer">
+    <%= image_tag("heroImage.jpg") %>
 
-  <div id="homeHero">
-    <div id="homeHeroContentContainer">
-      <%= image_tag("heroImage.jpg") %>
 
-      <p>
 
-      <div class="heroRed">STOP</div>
-      <div class="heroBlue">letting your</div>
-      <div class="heroGreen">PROJECTS die</div>
+    <div class="heroRed">STOP</div>
+    <div class="heroBlue">letting your</div>
+    <div class="heroGreen">PROJECTS die</div>
 
-      </p>
 
-    </div>
   </div>
-  <h1>Welcome!</h1>
+</div>
+<div class="contentContainer">
+<h1 class="shadow">Welcome!</h1>
 
-  <p>
-    <span> Lorem ipsum </span> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-    est laborum.
-  </p>
+<p>
+  <span> Lorem ipsum </span> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+  labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+  nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+  est laborum.
+</p>
 
-  <h1>Featured Project:</h1>
+<h1 class="shadow">Featured Project:</h1>
 
-  <%= render :partial => 'home/featured' %>
+<%= render :partial => 'home/featured' %>
 
 
-  <div class="paginate">
-    <%= will_paginate @side_projects %>
-  </div>
+<div class="paginate shadow">
+  <%= will_paginate @side_projects %>
+</div>
 
-  <%= render :partial => 'side_projects/list' %>
+<%= render :partial => 'side_projects/list' %>
 
 
 

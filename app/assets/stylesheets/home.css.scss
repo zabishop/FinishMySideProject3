@@ -2,5 +2,48 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/* Styles for the home hero spot.  needs refactoring/cleaning up ////////////////*/
 
+#homeHero {
+  width: 874px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+#homeHeroContentContainer {
+  background: url('heroBackground.jpg') repeat-x red;
+  height: 333px;
+}
+#homeHero img {
+  float: left;
+}
+#homeHero p {
+  height: 605px;
+  float: right;
+}
+.heroRed, .heroBlue, .heroGreen {
+  font-family: "TradeGothicLTStdCnBold";
+}
+.heroRed {
+  position: relative;
+  top: 40px;
+  left: 10px;
+  font-size: 128px;
+  text-transform: uppercase;
+  color: #e9332c;
+}
+.heroBlue {
+  position: relative;
+  top: 20px;
+  left: 10px;
+  text-align: center;
+  font-size: 72px;
+  color: #65b7bb;
+}
+.heroGreen {
+  position: relative;
+  top: 20px;
+  left: 10px;
+  font-size: 90px;
+  color: #93c44a;
+}
 
