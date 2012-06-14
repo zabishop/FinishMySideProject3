@@ -23,7 +23,10 @@
 
 
   <h2>Tags:</h2>
-  <%= button_to @side_project.tags.map { |t| t.name }.join(", "), tags_index_path, :method => :get %>
+  <% @side_project.tags.each do |tag| %>
+      <b><%= tag.name %></b><br>
+   <% end %>
+
 
 
 <h2>Comments</h2>

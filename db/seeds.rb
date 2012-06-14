@@ -12,6 +12,12 @@ SideProject.delete_all
 
 Comment.delete_all
 
+Tag.delete_all
+
+@tag1 = Tag.create(:name => 'red')
+@tag2 = Tag.create(:name => 'blue')
+@tag3 = Tag.create(:name => 'greenlike')
+
 for i in 1..10
 
   @my_user = User.create(:name => 'user ' + i.to_s,
@@ -36,14 +42,17 @@ for i in 1..10
                  :side_project => @my_side_project)
 
 
-  Tag.create(:name => 'red',
-             :side_project => @my_side_project1)
 
-  Tag.create(:name => 'blue',
-             :side_project => @my_side_project2)
+  @tag1.side_projects.push(@my_side_project1)
+  @tag1.save()
 
-  Tag.create(:name => 'blue',
-             :side_project => @my_side_project1)
+
+  @tag2.side_projects.push(@my_side_project2)
+  @tag2.side_projects.push(@my_side_project1)
+
+
+
+  @tag3.side_projects.push(@my_side_project2)
 end
 
 

@@ -6,7 +6,7 @@ class SideProject < ActiveRecord::Base
   validates :project_title, :uniqueness =>  true
 
   has_many :comments, :dependent => :destroy
-  has_many :tags
+  has_and_belongs_to_many :tags
   belongs_to :user
 
 
