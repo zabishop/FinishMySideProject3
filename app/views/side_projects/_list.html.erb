@@ -5,7 +5,7 @@
 
           <p><%= truncate(side_project.description, length: 200) %></p>
           <%= image_tag(side_project.image_url, class: 'list_image') %>
-          <%= side_project.repo_url %>
+          <%= button_to side_project.repo_url, side_project.user %>
           <div class="descriptionButtons">
             <%= button_to 'Email Owner', side_project.user %>
             <!--  #button_to 'Edit', edit_side_project_path(side_project) %> edit needs to be made admin and/or owner only -->

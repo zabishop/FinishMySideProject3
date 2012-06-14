@@ -1,7 +1,7 @@
 <%= form_for([@side_project, @side_project.comments.build]) do |f| %>
 
     <div class="field">
-      <%= f.label :body %>
+      <h2><%= f.label 'Comment here:' %></h2>
       <%= f.text_area :body %>
     </div>
     <div class="actions">

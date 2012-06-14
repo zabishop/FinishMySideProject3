@@ -16,7 +16,7 @@ Tag.delete_all
 
 @tag1 = Tag.create(:name => 'red')
 @tag2 = Tag.create(:name => 'blue')
-@tag3 = Tag.create(:name => 'greenlike')
+@tag3 = Tag.create(:name => 'green')
 
 for i in 1..10
 
@@ -37,10 +37,13 @@ for i in 1..10
                                          :repo_url => 'repo' + (i + 10).to_s + '.com',
                                          :user => @my_user)
 
-  Comment.create(:commenter => @my_user,
+  Comment.create(:commenter => @my_user.name,
                  :body => 'i like your project!',
-                 :side_project => @my_side_project)
+                 :side_project => @my_side_project1)
 
+  Comment.create(:commenter => @my_user.name,
+                 :body => 'i really am apathetic towards your project!',
+                 :side_project => @my_side_project2)
 
 
   @tag1.side_projects.push(@my_side_project1)

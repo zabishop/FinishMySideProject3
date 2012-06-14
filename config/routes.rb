@@ -41,11 +41,12 @@ FinishMySideProject2::Application.routes.draw do
 
   get "home/endorse", as: 'endorse'
 
-  get "tags/index"
+  #post "tags/index"
 
   #This solves the routes issues to users: http://stackoverflow.com/questions/5136940/undefined-method-user-path
   #I Googled: _path rails
   match '/users/:id', :to => 'users#show', :as => :user
+  match '/tags/:id', :to => 'tags#index', :as => :tag
 
 
 

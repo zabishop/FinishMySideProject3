@@ -1,11 +1,8 @@
+<h1>Other projects tagged '<%= @tag.name %>':</h1>
+
 <ul>
-<% @tags.each do |tag| %>
-    <li><%= tag.name %></li>
-     <ul>
-    <% tag.side_projects.each do |project| %>
+    <% @tag.side_projects.each do |project| %>
            <li><%= project.project_title %></li>
     <% end %>
      </ul>
       <br><br>
-<% end %>
-</ul>
