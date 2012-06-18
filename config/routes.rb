@@ -1,4 +1,6 @@
 FinishMySideProject2::Application.routes.draw do
+  resources :endorsements
+
   get "admin/index"
 
   get 'admin' => 'admin#index'

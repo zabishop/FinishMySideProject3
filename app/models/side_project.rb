@@ -7,6 +7,7 @@ class SideProject < ActiveRecord::Base
 
   has_many :comments, :dependent => :destroy
   has_and_belongs_to_many :tags
+  has_and_belongs_to_many :endorsers
   belongs_to :user
 
 

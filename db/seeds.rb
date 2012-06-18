@@ -14,6 +14,8 @@ Comment.delete_all
 
 Tag.delete_all
 
+Endorsement.delete_all
+
 @tag1 = Tag.create(:name => 'red')
 @tag2 = Tag.create(:name => 'blue')
 @tag3 = Tag.create(:name => 'green')
@@ -25,7 +27,9 @@ for i in 1..10
               :profile_pic => 'baby.png',
               :email => 'user' + i.to_s + '@gmail.com')
 
-  @my_side_project1 = SideProject.create(:project_title => 'project' + i.to_s,
+  @project_title = "side_project" + i.to_s
+
+  @my_side_project1 = SideProject.create(:project_title => @project_title,
                      :description => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
                      :image_url => 'project_pic.jpg',
                      :repo_url => 'repo' + i.to_s + '.com',
@@ -45,6 +49,9 @@ for i in 1..10
                  :body => 'i really am apathetic towards your project!',
                  :side_project => @my_side_project2)
 
+  Endorsement.create(:user_id => @my_user.id,
+                     :side_project_id => @my_side_project1.id)
+
 
   @tag1.side_projects.push(@my_side_project1)
   @tag1.save()
@@ -58,4 +65,4 @@ for i in 1..10
   @tag3.side_projects.push(@my_side_project2)
 end
 
-
+@endorsement1 = User
