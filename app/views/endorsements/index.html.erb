@@ -2,14 +2,14 @@
 
 <table>
   <tr>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Endorser</th>
+    <th>Endorsement</th>
+    <th>three</th>
   </tr>
 
 <% @endorsements.each do |endorsement| %>
   <tr>
-    <td><%= link_to 'Show', endorsement %></td>
+    <td><%= link_to @endorsement.user_id, endorsement %></td>
     <td><%= link_to 'Edit', edit_endorsement_path(endorsement) %></td>
     <td><%= link_to 'Destroy', endorsement, confirm: 'Are you sure?', method: :delete %></td>
   </tr>

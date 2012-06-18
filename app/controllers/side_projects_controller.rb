@@ -18,12 +18,15 @@ class SideProjectsController < ApplicationController
   # GET /side_projects/1
   # GET /side_projects/1.json
   def show
+    @endorsement = Endorsement.find_by_side_project_id(params[:id])
+    @endorser = User.find(@endorsement)
     @side_project = SideProject.find(params[:id])
    #{ @comment = Comment.find(params[:id])}
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @side_project }
     end
+
   end
 
   # GET /side_projects/new
@@ -93,5 +96,11 @@ class SideProjectsController < ApplicationController
 
   def user
   end
+
+  def endorse
+
+
+  end
+
 
 end
