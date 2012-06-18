@@ -3,6 +3,6 @@ class TagsController < ApplicationController
   def index
     #@tags = Tag.all()
     @tag = Tag.find(params[:id])
-    #@tags = Tag.paginate page: params[:page], order: 'created_at desc', per_page: 10
+    @tags = Tag.paginate page: params[:page], order: 'created_at desc', per_page: 5
   end
 end
