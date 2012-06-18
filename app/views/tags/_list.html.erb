@@ -1,0 +1,18 @@
+<div class="projectsContainer">
+  <% @tag.side_projects.each do |side_project| %>
+      <div class="descriptionContainer shadow">
+        <h3><%= link_to side_project.project_title, side_project %></h3>
+
+        <p><%= truncate(side_project.description, length: 200) %></p>
+        <%= image_tag(side_project.image_url, class: 'list_image') %>
+        <%= button_to side_project.repo_url, side_project.user %>
+        <div class="descriptionButtons">
+          <%= button_to 'Email Owner', side_project.user %>
+          <!--  #button_to 'Edit', edit_side_project_path(side_project) %> edit needs to be made admin and/or owner only -->
+          <!--  #button_to 'Destroy', side_project, confirm: 'Are you sure?', method: :delete %> destroy  needs to be made admin and/or owner only -->
+          <%= button_to 'Endorse Project', endorse_path %>
+        </div>
+
+      </div>
+  <% end %>
+</div>

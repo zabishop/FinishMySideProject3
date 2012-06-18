@@ -1,8 +1,8 @@
 <h1>Other projects tagged '<%= @tag.name %>':</h1>
 
-<ul>
-    <% @tag.side_projects.each do |project| %>
-           <li><%= project.project_title %></li>
-    <% end %>
-     </ul>
-      <br><br>
+
+
+
+
+<%= render :partial => 'tags/list' %>
+
