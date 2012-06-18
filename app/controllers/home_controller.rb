@@ -3,7 +3,7 @@ class HomeController < ApplicationController
   skip_before_filter :authorize, only: [:index, :terms_of_use, :privacy_policy, :about]
 
   def index
-    @side_projects = SideProject.paginate page: params[:page], order: 'created_at desc', per_page: 5
+    @side_projects = SideProject.paginate page: params[:page], order: 'created_at desc', per_page: 4
     #@id = 125.to_i
     @side_project = SideProject.first
     #{ @comment = Comment.find(params[:id])}
