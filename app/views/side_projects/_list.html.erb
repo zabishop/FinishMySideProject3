@@ -5,13 +5,12 @@
 
           <p><%= truncate(side_project.description, length: 200) %></p>
           <%= image_tag(side_project.image_url, class: 'list_image') %>
-          <%= button_to side_project.repo_url, side_project.user %>
-          <div class="descriptionButtons">
-            <%= button_to 'Email Owner', side_project.user %>
+          <%= button_to side_project.repo_url, side_project.user, {:class => 'buttonTo'} %>
+            <%= button_to 'Email Owner', side_project.user, {:class => 'buttonTo'} %>
             <!--  #button_to 'Edit',  %> edit needs to be made admin and/or owner only -->
             <!--  #button_to 'Destroy', side_project, confirm: 'Are you sure?', method: :delete %> destroy  needs to be made admin and/or owner only -->
-            <%= button_to 'Endorse Project', endorse_path %>
-          </div>
+            <%= button_to 'Endorse Project', endorse_path, {:class => 'buttonTo'}%>
+
 
       </div>
   <% end %>

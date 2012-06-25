@@ -16,6 +16,9 @@
   margin: 10px;
   padding: 5px;
   display: inline-block;
+  button {
+    background: yellow;
+  }
 }
 
 .descriptionContainer p {
@@ -23,11 +26,7 @@
   width: 60%;
   float: right;
 }
-.shadow {
-  -moz-box-shadow: 3px 3px 5px 0 #8a8877;
-  -webkit-box-shadow: 3px 3px 5px 0 #8a8877;
-  box-shadow: 3px 3px 5px 0 #8a8877;
-}
+
 .descriptionContainer h3 a {
   font-family: "TradeGothicLTStdCnBold";
   color: white;

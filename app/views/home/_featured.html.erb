@@ -1,17 +1,20 @@
-<p>
-  <%= image_tag(@side_project.image_url, class: 'list_image') %>
-</p>
-
-<p>
-  <b>Project title:</b>
+<h4>
   <%= @side_project.project_title %>
-</p>
+</h4>
+
+<%= image_tag(@side_project.image_url, class: 'list_image') %>
 
 <p>
   <b>Description:</b>
   <%= @side_project.description %>
 </p>
-<p>
-  <b>Repo URL:</b>
-  <%= @side_project.repo_url %>
+<div class="buttonContainer">
+  <%= button_to 'GitHub', @side_project.user, {:class => 'buttonTo'} %>
+  <%= button_to 'Email Owner', @side_project.user, {:class => 'buttonTo'} %>
+  <%= button_to 'Endorse Project', endorse_path, {:class => 'buttonTo'}%>
+</div>
+<p><b>Tags:</b>
+  <% @side_project.tags.each do |tag| %>
+      <%= tag.name %>
+  <% end %>
 </p>
