@@ -1,16 +1,11 @@
-<div class="siteContainer">
+<div class="homeContainer">
 
   <div id="homeHero">
     <div id="homeHeroContentContainer">
       <%= image_tag("heroImage.jpg") %>
-
-
-
       <div class="heroRed">STOP</div>
       <div class="heroBlue">letting your</div>
       <div class="heroGreen">PROJECTS die</div>
-
-
     </div>
 
     <h1>Welcome!</h1>
@@ -32,12 +27,11 @@
     <%= render :partial => 'home/featured' %>
   </div>
 
-    <div class="paginate">
-      <%= will_paginate @side_projects %>
-    </div>
+  <div class="paginate">
+    <%= will_paginate @side_projects %>
+  </div>
 
-    <%= render :partial => 'side_projects/list' %>
-
-
+  <%= render :partial => 'side_projects/list' %>
 
 </div>
+

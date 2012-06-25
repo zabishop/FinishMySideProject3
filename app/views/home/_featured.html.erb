@@ -8,11 +8,13 @@
   <b>Description:</b>
   <%= @side_project.description %>
 </p>
-<div class="buttonContainer">
-  <%= button_to 'GitHub', @side_project.user, {:class => 'buttonTo'} %>
-  <%= button_to 'Email Owner', @side_project.user, {:class => 'buttonTo'} %>
-  <%= button_to 'Endorse Project', endorse_path, {:class => 'buttonTo'}%>
+
+<div class="smallNavBar">
+  <div class="smallNavBarItem"><%= button_to 'GitHub', @side_project.user, {:class => 'buttonTo gitHubBtn'} %> </div>
+  <div class="smallNavBarItem"><%= button_to 'Comment', @side_project.user, {:class => 'buttonTo commentBtn'} %> </div>
+  <div class="smallNavBarItem"><%= button_to 'Encourage', endorse_path, {:class => 'buttonTo encourageBtn'} %>  </div>
 </div>
+
 <p><b>Tags:</b>
   <% @side_project.tags.each do |tag| %>
       <%= tag.name %>
