@@ -14,7 +14,6 @@ Comment.delete_all
 
 Tag.delete_all
 
-Endorsement.delete_all
 
 @tag1 = Tag.create(:name => 'red')
 @tag2 = Tag.create(:name => 'blue')
@@ -49,20 +48,9 @@ for i in 1..10
                  :body => 'i really am apathetic towards your project!',
                  :side_project => @my_side_project2)
 
-  Endorsement.create(:user_id => @my_user.id,
-                     :side_project_id => @my_side_project1.id)
-
-
   @tag1.side_projects.push(@my_side_project1)
   @tag1.save()
-
-
   @tag2.side_projects.push(@my_side_project2)
   @tag2.side_projects.push(@my_side_project1)
-
-
-
   @tag3.side_projects.push(@my_side_project2)
 end
-
-@endorsement1 = User
